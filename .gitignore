@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+planejamento.txt
+
 # production
 /build
 
