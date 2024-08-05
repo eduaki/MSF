@@ -2,5 +2,36 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #f2f2f2;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	color: white;
+}
+
+html {
+	background-color: var(--primary-dark);
+}
+ul,
+li {
+	list-style: none;
+}
+button,
+input,
+a {
+	outline: none;
+	border: none;
+	text-decoration: none;
+	background: none;
+}
+button,
+a {
+	cursor: pointer;
+}
+
+:root {
+	/* cores */
+	--primary-dark: #05172f;
+	--secondary-dark: #1e2e44;
+	--secondary_hover: #030c18;
+	--offwhite: #b4b9c1;
+
+	--red: #f07569;
 }

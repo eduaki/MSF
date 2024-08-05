@@ -14,17 +14,17 @@ apping.listen(3000);
 
 const createWindow = () => {
 	const win = new BrowserWindow({
-		minWidth: 1280,
-		minHeight: 750,
+		minWidth: 905,
+		minHeight: 650,
 		webPreferences: {
 			preload: path.join(__dirname, "preload.js"),
 			nodeIntegration: true,
 		},
 		frame: true,
-		icon: __dirname + "/icon.png",
+		icon: __dirname + "/favicon.ico",
 	});
 
-	win.loadURL("http://localhost:3000/");
+	win.loadFile("public/index.html");
 };
 
 if (require("electron-squirrel-startup")) app.quit();
