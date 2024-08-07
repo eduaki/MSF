@@ -1,9 +1,10 @@
+import DougnhnutChart from "../../components/DoughnutChart";
 import Header from "../../components/Header";
 import InfoCard from "../../components/InfoCard";
 import { Container, Layout, Separator } from "./styles";
 
 export default function Dashboard() {
-	var AccountBalance = 2998.57;
+	var AccountBalance = 45.30;
 
 	return (
 		<Container>
@@ -56,7 +57,9 @@ export default function Dashboard() {
 						<span>(o valor pode estar desatualizado)</span>
 					</div>
 				</div>
-				<div className="block mm"></div>
+				<div className="block mm">
+					<DougnhnutChart />
+				</div>
 				<div className="block mb"></div>
 				<div className="block rr"></div>
 			</Layout>
