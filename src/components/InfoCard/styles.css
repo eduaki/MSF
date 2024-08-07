@@ -1,0 +1,19 @@
+li.cardwrapper {
+	margin: 5px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed gray;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 18px;
+	color: white;
+	letter-spacing: 2px;
+	line-height: 15px;
+}
+
+p {
+	margin-top: 3px;
+	font-size: 14px;
+	color: #d3d3d3;
+}

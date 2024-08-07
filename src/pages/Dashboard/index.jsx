@@ -1,7 +1,10 @@
 import Header from "../../components/Header";
-import { Container, Layout } from "./styles";
+import InfoCard from "../../components/InfoCard";
+import { Container, Layout, Separator } from "./styles";
 
 export default function Dashboard() {
+	var AccountBalance = 2998.57;
+
 	return (
 		<Container>
 			<Header />
@@ -12,15 +15,47 @@ export default function Dashboard() {
 
 			<Layout>
 				<div className="block lt">
-					<p>Contas conectadas: </p>
+					<h4>Contas conectadas: </h4>
+					<Separator />
 					<ul>
 						<li></li>
 					</ul>
 				</div>
 				<div className="block ll">
-					<p>Histórico</p>
+					<h4>Histórico</h4>
+					<Separator />
+					<ul>
+						<InfoCard
+							title={"teste"}
+							content={
+								"isso é um teste de conteudoaasdadasdas  asd asd asd asdasdasdasd ads asdadsasdasd "
+							}
+						/>
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+						<InfoCard title={"teste"} content={"isso é um teste de conteudo"} />
+					</ul>
 				</div>
-				<div className="block mt"></div>
+				<div className="block mt">
+					<h4>Valor em Conta</h4>
+					<Separator />
+					<div className="content">
+						<h2>
+							<bigger>R$</bigger>
+							{AccountBalance.toLocaleString("pt-br", {
+								minimumFractionDigits: 2,
+							})}
+						</h2>
+						<span>(o valor pode estar desatualizado)</span>
+					</div>
+				</div>
 				<div className="block mm"></div>
 				<div className="block mb"></div>
 				<div className="block rr"></div>
