@@ -6,6 +6,11 @@ export const Container = styled.div`
 		font-weight: 700;
 		color: var(--offwhite);
 	}
+
+	overflow-y: scroll;
+	max-height: calc(100vh - 22px);
+
+
 `;
 
 export const Layout = styled.div`
@@ -43,6 +48,10 @@ export const Layout = styled.div`
 	}
 	@media (max-width: 1400px) {
 		gap: 5px;
+		scale: .8;
+		margin: -10vh -5vw;
+		width: 80vw;
+		justify-content: center;
 	}
 	@media (min-width: 1606px) {
 		column-gap: 10px;
@@ -102,6 +111,16 @@ export const Layout = styled.div`
 	}
 	.mb {
 		grid-area: mb;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h2{
+			text-align: left;
+			width: 100%;
+		}
+
 	}
 	.rr {
 		grid-area: rr;

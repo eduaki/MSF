@@ -78,8 +78,22 @@ export default function Dashboard() {
 						chartColors={chartColors}
 					/>
 				</div>
-				<div className="block mb"></div>
-				<div className="block rr"></div>
+				<div className="block mb">
+					<h2>Objetivos: </h2>
+					<Separator/>
+					<DougnhnutChart 
+					val={[1000, 150]} 
+					labels={["Objetivo viagem", "Valor guardardado"]} 
+					chartColors={[
+						"rgb(255, 205, 86)",
+						"rgb(8, 100, 175)", 
+						]}
+						rotation={50}
+					/>
+				</div>
+				<div className="block rr">
+
+				</div>
 			</Layout>
 		</Container>
 	);

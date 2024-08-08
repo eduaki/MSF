@@ -3,7 +3,7 @@ import { Doughnut } from "react-chartjs-2";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
-export default function DougnhnutChart({ val, labels, chartColors }) {
+export default function DougnhnutChart({ val, labels, chartColors, rotation}) {
 	let values = Object.values(val);
 
 	const data = {
@@ -27,7 +27,7 @@ export default function DougnhnutChart({ val, labels, chartColors }) {
 						maintainAspectRatio: true,
 						responsive: false,
 						borderColor: "transparent",
-
+						rotation: rotation,
 						plugins: {
 							legend: {
 								position: "bottom",
