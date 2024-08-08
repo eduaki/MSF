@@ -29,7 +29,7 @@ export const Layout = styled.div`
 	grid-template-columns: 350px 350px 350px;
 	grid-template-rows: 250px 250px 250px;
 
-	row-gap: 20px;
+	row-gap: 10px;
 
 	justify-content: space-between;
 	align-self: center;
@@ -39,10 +39,14 @@ export const Layout = styled.div`
 	transition: 0.4s;
 
 	@media (max-width: 1605px) {
-		column-gap: 20px;
+		column-gap: 10px;
 	}
 	@media (max-width: 1400px) {
-		gap: 10px;
+		gap: 5px;
+	}
+	@media (min-width: 1606px) {
+		column-gap: 10px;
+		justify-content: center;
 	}
 	.block {
 		transition: 500ms ease;
@@ -91,6 +95,10 @@ export const Layout = styled.div`
 	}
 	.mm {
 		grid-area: mm;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	.mb {
 		grid-area: mb;

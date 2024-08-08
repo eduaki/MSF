@@ -1,51 +1,44 @@
-import Chart, { CategoryScale } from "chart.js/auto"
-import { Doughnut, Pie } from "react-chartjs-2";
+import Chart, { ArcElement, Legend, Tooltip } from "chart.js/auto";
+import { Doughnut } from "react-chartjs-2";
 
-Chart.register(CategoryScale)
+Chart.register(ArcElement, Tooltip, Legend);
 
-export default function DougnhnutChart(){
+export default function DougnhnutChart({ val, labels, chartColors }) {
+	let values = Object.values(val);
 
-    const data = {
-        labels: [
-          'Red',
-          'Blue',
-          'Yellow'
-        ],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [300, 50, 100],
-          backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
-          ],
-          hoverOffset: 4
-        }]
-      };
+	const data = {
+		labels,
+		datasets: [
+			{
+				data: values,
+				backgroundColor: chartColors,
+				hoverOffset: 10,
+			},
+		],
+	};
 
-    var chart = new Chart({
-        type: "doughnut",
-        data: data,
+	return (
+		<>
+			<div>
+				<Doughnut
+					data={data}
+					height={180}
+					options={{
+						maintainAspectRatio: true,
+						responsive: false,
+						borderColor: "transparent",
 
-    })
-
-    console.log(chart)
-
-    return (
-        <>
-            <div>
-            <Pie
-        data={chart}
-        options={{
-          plugins: {
-            title: {
-              display: true,
-              text: "Users Gained between 2016-2020"
-            }
-          }
-        }}
-      />
-            </div>
-        </>
-    )
+						plugins: {
+							legend: {
+								position: "bottom",
+								labels: { pointStyle: "rectRounded", usePointStyle: true },
+								display: true,
+								align: "center",
+							},
+						},
+					}}
+				/>
+			</div>
+		</>
+	);
 }

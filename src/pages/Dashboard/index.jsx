@@ -4,7 +4,19 @@ import InfoCard from "../../components/InfoCard";
 import { Container, Layout, Separator } from "./styles";
 
 export default function Dashboard() {
-	var AccountBalance = 45.30;
+	var AccountBalance = 45.3;
+	var reservas = 1000;
+	var gastoJogos = 50;
+	var fixas = 300;
+
+	let chartValues = { fixas, gastoJogos, reservas, AccountBalance };
+	let labels = ["Contas fixas", "Jogos", "Reservas", "em conta"];
+	let chartColors = [
+		"rgb(8, 100, 175)",
+		"rgb(235, 54, 54)",
+		"rgb(255, 205, 86)",
+		"#8fb4a0",
+	];
 
 	return (
 		<Container>
@@ -58,7 +70,13 @@ export default function Dashboard() {
 					</div>
 				</div>
 				<div className="block mm">
-					<DougnhnutChart />
+					<h2>Compromentimento da renda</h2>
+					<Separator style={{ marginBottom: 20 }} />
+					<DougnhnutChart
+						val={chartValues}
+						labels={labels}
+						chartColors={chartColors}
+					/>
 				</div>
 				<div className="block mb"></div>
 				<div className="block rr"></div>
