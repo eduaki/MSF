@@ -4,16 +4,16 @@ import InfoCard from "../../components/InfoCard";
 import { Container, Layout, Separator } from "./styles";
 
 export default function Dashboard() {
-	var AccountBalance = 45.3;
+	var AccountBalance = 1050;
 	var reservas = 1000;
 	var gastoJogos = 50;
 	var fixas = 300;
 
 	let chartValues = { fixas, gastoJogos, reservas, AccountBalance };
-	let labels = ["Contas fixas", "Jogos", "Reservas", "em conta"];
+	let labels = ["Contas Fixas", "Diversos", "Reservas", "em conta"];
 	let chartColors = [
 		"rgb(8, 100, 175)",
-		"rgb(235, 54, 54)",
+		"rgb(235, 54, 54",
 		"rgb(255, 205, 86)",
 		"#8fb4a0",
 	];
